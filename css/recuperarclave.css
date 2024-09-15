@@ -1,0 +1,50 @@
+body {
+    background: url('/mnt/data/image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.lead {
+    text-align: center;
+    background-color: #343A40;
+    color:#33FFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.1em;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    text-shadow: 5px 5px 5px #000000;
+ }
+ .bg {
+    background-image: url(../img/fondo1.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+.login-box .form-control {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: white;
+}
+
+.login-box .btn-primary {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.login-box .btn-primary:hover {
+    background-color: #138496;
+    border-color: #138496;
+}
