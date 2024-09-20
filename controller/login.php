@@ -1,7 +1,7 @@
 <?php
 echo "estas en control del Login <br/>"
 
-require_once ("/controller/config.php");
+require_once ("/controller/login.php");
 
 // require_once("ConfigDb.class.php");
 // $bd = new Config();
