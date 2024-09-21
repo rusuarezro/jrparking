@@ -1,6 +1,19 @@
 /* function clicbtn(){
     window.location.assign("ingreso.html");
 } */
+
+import {link} from "./tools.js"
+
+document.addEventListener("DOMContentLoaded", (e)=>{
+
+})
+
+document.addEventListener("click", (e)=>{
+    //console.log(e.target.matches(".btn-ingresar"))
+    if(e.target.matches(".btn-ingresar")) link("login.html")
+})
+
+/*
 function btregistro(url){
     location.href=url;
 }
@@ -20,3 +33,4 @@ function btregistro(url){
             $("#email").focus();
         }
     })
+*/
