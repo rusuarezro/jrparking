@@ -1,7 +1,3 @@
-/* function clicbtn(){
-    window.location.assign("ingreso.html");
-} */
-
 import {link} from "./tools.js"
 
 document.addEventListener("DOMContentLoaded", (e)=>{
@@ -13,24 +9,12 @@ document.addEventListener("click", (e)=>{
     if(e.target.matches(".btn-ingresar")) link("login.html")
 })
 
-/*
-function btregistro(url){
-    location.href=url;
-}
+document.addEventListener("click", (e)=>{
+    //console.log(e.target.matches("#btn-auto"))
+    if(e.target.matches("#btn-auto")) link("ingresardatos.html")
+})
 
-    $('#btregistro').on ("click", ()=>{
-        btregistro("creacioncuenta.html");
-    })
-
-    $("#form_login").on("submit", ()=>{
-        let nom_usu=$("email").val();
-        let pass_usu=$("#password").val();
-
-        if(!nom_usu==="" && !pass_usu===""){
-            alert("ok ---- inicia Ajax")
-        }else{
-            alert("Ingrese la información requerida")
-            $("#email").focus();
-        }
-    })
-*/
+document.addEventListener("click", (e)=>{
+    //console.log(e.target.matches("#btn-bici"))
+    if(e.target.matches("#btn-bici")) link("ingredatosbici.html")
+})
