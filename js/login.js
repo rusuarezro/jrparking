@@ -1,4 +1,4 @@
-import { Ajax, link } from "./tools";
+import { Ajax, link } from "./tools.js";
 
 // Funcion de Iniciar Sesión
 export function iniciarSesion(method){
@@ -12,9 +12,9 @@ export function iniciarSesion(method){
          method,
          param: info,
          fSuccess: (resp) => {
-            if (resp.code == 200) {
-                console.log(resp.data)
-            };
+            if (resp.code == 200) link("ingreso.html?idtk="+resp.idToken);
+                //console.log(resp.data)
+            
     }
    })
 

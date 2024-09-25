@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             //echo $_post["user"]; 
             $bd = new ConfigDb();
             $conn = $bd->conexion();
-            $sql = 
+            $sql = "SELECT `ID_USUARIO`, `NOMBRES`, `APELLIDOS` FROM `tbusuarios` WHERE `EMAIL`= :user  AND `CONTRASENA` = MD5 (:clave)";
             $stmt = $conn ->prepare($sql);
             $stmt->bindParam(":user",$post["user"],PDO::PARAM_STR);
             $stmt->bindParam(":clave",$post["pass"],PDO::PARAM_STR);
@@ -23,8 +23,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
                     header("HTTP/1.1 200 OK");
                     echo json_encode(['code'=>200,
-                    'idUser'=>$result[0]["IdUsuario"],
-                    'Usuario'=>$result[0]["UsuNombre"]." ".$result[0]["UsuApellido"],
+                    'idUser'=>$result[0]["ID_USUARIO"],
+                    'Usuario'=>$result[0]["NOMBRES"]." ".$result[0]["APELLIDOS"],
                     'idToken'=>$idtoken,
                     'msg' => "OK"]);
                 }else{                    

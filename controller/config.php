@@ -17,7 +17,7 @@ class ConfigDb {
            throw new Exception("ERROR: ".$e->getMessage());
        }
    }
-}
+
 
 public function obtenerToken($iduser, $nombreuser){
     $bandera=true;
@@ -32,5 +32,5 @@ public function obtenerToken($iduser, $nombreuser){
         return $token;                
     }
 }
-
+}
 ?>
