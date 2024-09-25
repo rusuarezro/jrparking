@@ -1,5 +1,5 @@
 <?php
-require_once("configdb.php");
+require_once("config.php");
 
 //header('Content-Type: application/json');
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 $result = $stmt->fetchAll();
                 if(count($result) > 0)
                 {
-                    $idtoken = $bd->obtenerToken($result[0]["IdUsuario"], $result[0]["UsuNombre"]." ".$result[0]["UsuApellido"]);
+                    $idtoken = $bd->obtenerToken($result[0]["ID_USUARIO"], $result[0]["NOMBRES"]." ".$result[0]["APELLIDOS"]);
                     //var_dump($result);
 
                     header("HTTP/1.1 200 OK");
