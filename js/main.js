@@ -1,5 +1,6 @@
 import {link, Ajax} from "./tools.js"
-import { iniciarSesion, openHtml } from "./login.js"
+import { iniciarSesion } from "./login.js"
+
 
 document.addEventListener("DOMContentLoaded", (e)=>{
 
@@ -18,4 +19,5 @@ document.addEventListener("click", (e)=>{
 document.addEventListener("submit", (e)=>{
     e.preventDefault()
     if(e.target.matches("#form_login")) iniciarSesion("POST")
+    if(e.target.matches("#form-newaccount")) registrarUsuario("POST")
 })
