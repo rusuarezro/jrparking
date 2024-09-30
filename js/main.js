@@ -1,5 +1,5 @@
 import {link, Ajax} from "./tools.js"
-import { iniciarSesion } from "./login.js"
+import { iniciarSesion, openHtml } from "./login.js"
 
 document.addEventListener("DOMContentLoaded", (e)=>{
 

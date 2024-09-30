@@ -1,5 +1,6 @@
 import { Ajax, link } from "./tools.js";
 
+
 // Funcion de Iniciar Sesión
 export function iniciarSesion(method){
     let user = document.getElementById("email").value;
@@ -19,3 +20,7 @@ export function iniciarSesion(method){
    })
 
 }
+
+
+  
+  
