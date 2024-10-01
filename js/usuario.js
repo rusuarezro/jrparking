@@ -1,4 +1,4 @@
-import { Ajax } from "./tools";
+import { Ajax } from "./tools.js";
 
 export function registrarUsuario (method) {
 
