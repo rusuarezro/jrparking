@@ -1,5 +1,7 @@
 import {link, Ajax} from "./tools.js"
 import { iniciarSesion } from "./login.js"
+import { registrarUsuario } from "./usuario.js"
+
 
 
 document.addEventListener("DOMContentLoaded", (e)=>{
