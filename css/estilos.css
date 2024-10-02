@@ -312,3 +312,13 @@ body, html {
     height: 10px;
     margin-right: 1px;
 }
+
+footer{
+    background-color: #333; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado vertical */
+    position: relative; /* Posicionamiento relativo para el footer */
+    bottom: 0; /* Asegura que el footer esté en la parte inferior */
+    width: 100%; /* Asegura que el footer abarque todo el ancho de la página */
+}

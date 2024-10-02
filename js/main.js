@@ -14,6 +14,8 @@ document.addEventListener("click", (e)=>{
     if(e.target.matches(".btn-ingresar")) link("login.html")
     if(e.target.matches("#btn-auto")) link("ingresardatos.html")
     if(e.target.matches("#btn-bici")) link("ingredatosbici.html")
+    if(e.target.matches("#nueva-cuenta")) link("creaciondecuenta.html")
+    
 })
 
 // El evento submit de los formularios

@@ -1,3 +1,72 @@
+/* .boton-ingresar {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+}
+.boton-ingresar {
+    display: flex;
+    align-items: center;
+}
+.boton-ingresar img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+} */
+
+/* footer p{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contenedor {
+ padding: 50px;
+ width: 100%;
+ height: 100%;
+}
+ */
+
+ body {
+    background-image: url('../img/fondo1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+.form-container {
+    background-color: rgba(0, 255, 255, 0.8); /* Aqua con opacidad */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.form-container:hover {
+    transform: translateY(-5px);
+}
+h1 {
+    color: #000000;
+    font-weight: bold;
+}
+.btn-custom {
+    background-color: #00BFFF; /* Azul claro */
+    color: black;
+}
+.form-group label {
+    font-weight: bold;
+}
+
+.lead {
+    text-align: center;
+    background-color: #343A40;
+    color:#33FFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.1em;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    text-shadow: 5px 5px 5px #000000;
+}
+
 .boton-ingresar {
     position: absolute;
     top: 1px;
@@ -13,25 +82,29 @@
     margin-right: 10px;
 }
 
-.lead {
-    text-align: center;
-    background-color: #343A40;
-    color:#33FFFF;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.1em;
-    word-spacing: 5px;
-    letter-spacing: 3px;
-    text-shadow: 5px 5px 5px #000000;
+.nwcuenta{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente, si es necesario */
+    height: 100%; /* Asegúrate de que el contenedor tenga altura */
 }
 
-footer p{
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.2);
+.text-centerr{
+    background-color: rgba(0, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-block;
+    width: auto;
+    color: #343A40;
 }
 
-.contenedor {
- padding: 50px;
- width: 100%;
- height: 100%;
+footer{
+    background-color: #333; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado vertical */
+    position: relative; /* Posicionamiento relativo para el footer */
+    bottom: 0; /* Asegura que el footer esté en la parte inferior */
+    width: 100%; /* Asegura que el footer abarque todo el ancho de la página */
 }
 
