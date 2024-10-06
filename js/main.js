@@ -23,5 +23,5 @@ document.addEventListener("click", (e)=>{
 document.addEventListener("submit", (e)=>{
     e.preventDefault()
     if(e.target.matches("#form_login")) iniciarSesion("POST")
-    if(e.target.matches("#form-newaccount")) registrarUsuario("POST")
+    if(e.target.matches("#form-newaccount")) registrarUsuario("PATCH")
 })
