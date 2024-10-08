@@ -8,8 +8,8 @@ if($_SERVER["REQUEST_METHOD"]=="PATCH"){
     try {
         $post = json_decode(file_get_contents('php://input'),true);
         
-        if($post["idNumber"]!="" && $post["nombres"]!="" && $post["apellidos"]!="" && $post["celular"]!="" 
-        && $post["email"]!="" && $post["pass"]!="" && $post["ESTADO_FK"]!="" && $post["profile"]!=""){
+        if($post["idNumber"]!="" && $post["NOMBRES"]!="" && $post["APELLIDOS"]!="" && $post["CELULAR"]!="" 
+        && $post["EMAIL"]!="" && $post["pass"]!="" && $post["ESTADO_FK"]!="" && $post["profile"]!=""){
             //echo $_post["user"]; 
             $bd = new ConfigDb();
             $conn = $bd->conexion();
@@ -21,14 +21,14 @@ if($_SERVER["REQUEST_METHOD"]=="PATCH"){
     celular: $form.celular.value,
     password: $form.password.value,
              */
-            $sql = "INSERT INTO `tbusuarios`(`ID_USUARIO`, `IDENTIFICACION`, `NOMBRES`, `APELLIDOS`, `CELULAR`, `EMAIL`, `CONTRASENA`, `ESTADO_FK`, `PERFIL_FK`) 
-            VALUES (null, :idNumber, :nombres, :apellidos, :celular, :email, :pass, :ESTADO_FK, :PERFIL_FK)";
+            $sql = "INSERT INTO tbusuarios(ID_USUARIO, IDENTIFICACION, NOMBRES, APELLIDOS, CELULAR, EMAIL, CONTRASENA, ESTADO_FK, PERFIL_FK) 
+            VALUES (null, :idNumber, :NOMBRES, :APELLIDOS, :CELULAR, :EMAIL, :pass, :ESTADO_FK, :PERFIL_FK)";
             $stmt = $conn ->prepare($sql);
             $stmt->bindParam(":idNumber",$post["idNumber"],PDO::PARAM_STR);
-            $stmt->bindParam(":nombres",$post["nombres"],PDO::PARAM_STR);
-            $stmt->bindParam(":apellidos",$post["apellidos"],PDO::PARAM_STR);
-            $stmt->bindParam(":celular",$post["celular"],PDO::PARAM_STR);
-            $stmt->bindParam(":email",$post["email"],PDO::PARAM_STR);
+            $stmt->bindParam(":NOMBRES",$post["NOMBRES"],PDO::PARAM_STR);
+            $stmt->bindParam(":APELLIDOS",$post["APELLIDOS"],PDO::PARAM_STR);
+            $stmt->bindParam(":CELULAR",$post["CELULAR"],PDO::PARAM_STR);
+            $stmt->bindParam(":EMAIL",$post["EMAIL"],PDO::PARAM_STR);
             $stmt->bindParam(":pass",$post["pass"],PDO::PARAM_STR);
             $stmt->bindParam(":ESTADO_FK",$post[""],PDO::PARAM_STR);
             $stmt->bindParam(":profile",$post["profile"],PDO::PARAM_STR);

@@ -19,4 +19,17 @@ export async function Ajax (info){
     }
   };
 
- 
+  export function salida() {
+    let idtoken = localStorage.getItem("idtk")
+    Ajax({
+      url: "../controller/login.php",
+      method: "GET",
+      param: { idtoken },
+      fSuccess: (resp) => {
+        if (resp.code !== 200) alert("Error al gestionar la salida del sistema")
+        localStorage.clear()
+        link("../src/login.html")
+      }
+    })
+
+  }

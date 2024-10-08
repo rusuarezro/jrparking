@@ -1,4 +1,4 @@
-import {link, Ajax} from "./tools.js"
+import {link, Ajax, salida} from "./tools.js"
 import { iniciarSesion } from "./login.js"
 import { registrarUsuario } from "./usuario.js"
 
@@ -15,6 +15,7 @@ document.addEventListener("click", (e)=>{
     if(e.target.matches("#btn-auto")) link("ingresardatos.html")
     if(e.target.matches("#btn-bici")) link("ingredatosbici.html")
     if(e.target.matches("#nueva-cuenta")) link("creaciondecuenta.html")
+    if (e.target.matches("#btncerrarsesion")) salida()
     
 })
 
@@ -25,3 +26,5 @@ document.addEventListener("submit", (e)=>{
     if(e.target.matches("#form_login")) iniciarSesion("POST")
     if(e.target.matches("#form-newaccount")) registrarUsuario("PATCH")
 })
+
+
