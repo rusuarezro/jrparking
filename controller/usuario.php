@@ -4,12 +4,11 @@
 require_once("config.php");
 
 //header('Content-Type: application/json');
-if($_SERVER["REQUEST_METHOD"]=="PATCH"){
+if($_SERVER["REQUEST_METHOD"]=="POST"){
     try {
         $post = json_decode(file_get_contents('php://input'),true);
         
-        if($post["idNumber"]!="" && $post["NOMBRES"]!="" && $post["APELLIDOS"]!="" && $post["CELULAR"]!="" 
-        && $post["EMAIL"]!="" && $post["pass"]!="" && $post["ESTADO_FK"]!="" && $post["profile"]!=""){
+        if($post["idNumber"]!="" && $post["nombres"]!="" && $post["apellidos"]!="" && $post["celular"]!="" && $post["email"]!="" && $post["password"]!="" && $post["profile"]!=""){
             //echo $_post["user"]; 
             $bd = new ConfigDb();
             $conn = $bd->conexion();
@@ -22,16 +21,15 @@ if($_SERVER["REQUEST_METHOD"]=="PATCH"){
     password: $form.password.value,
              */
             $sql = "INSERT INTO tbusuarios(ID_USUARIO, IDENTIFICACION, NOMBRES, APELLIDOS, CELULAR, EMAIL, CONTRASENA, ESTADO_FK, PERFIL_FK) 
-            VALUES (null, :idNumber, :NOMBRES, :APELLIDOS, :CELULAR, :EMAIL, :pass, :ESTADO_FK, :PERFIL_FK)";
+            VALUES (null, :idNumber, :NOMBRES, :APELLIDOS, :CELULAR, :EMAIL, :pass, '1', :PERFIL_FK)";
             $stmt = $conn ->prepare($sql);
             $stmt->bindParam(":idNumber",$post["idNumber"],PDO::PARAM_STR);
-            $stmt->bindParam(":NOMBRES",$post["NOMBRES"],PDO::PARAM_STR);
-            $stmt->bindParam(":APELLIDOS",$post["APELLIDOS"],PDO::PARAM_STR);
-            $stmt->bindParam(":CELULAR",$post["CELULAR"],PDO::PARAM_STR);
-            $stmt->bindParam(":EMAIL",$post["EMAIL"],PDO::PARAM_STR);
-            $stmt->bindParam(":pass",$post["pass"],PDO::PARAM_STR);
-            $stmt->bindParam(":ESTADO_FK",$post[""],PDO::PARAM_STR);
-            $stmt->bindParam(":profile",$post["profile"],PDO::PARAM_STR);
+            $stmt->bindParam(":NOMBRES",$post["nombres"],PDO::PARAM_STR);
+            $stmt->bindParam(":APELLIDOS",$post["apellidos"],PDO::PARAM_STR);
+            $stmt->bindParam(":CELULAR",$post["celular"],PDO::PARAM_STR);
+            $stmt->bindParam(":EMAIL",$post["email"],PDO::PARAM_STR);
+            $stmt->bindParam(":pass",$post["password"],PDO::PARAM_STR);
+            $stmt->bindParam(":PERFIL_FK",$post["profile"],PDO::PARAM_INT);
             if($stmt->execute()){
                     //var_dump($result);
                     header("HTTP/1.1 200 OK");

@@ -2,9 +2,9 @@ import { Ajax } from "./tools.js";
 
 export function registrarUsuario (method) {
 
- alert("Ok vamos a enviar los datos del formulario a traves del método"+method);
+//alert("Ok vamos a enviar los datos del formulario a traves del método"+method);
 let $form = document.getElementById("form-newaccount")
-let params = {
+let param = {
     nombres: $form.nombres.value,
     idNumber: $form.idNumber.value,
     apellidos: $form.apellidos.value,
@@ -14,11 +14,11 @@ let params = {
     password: $form.password.value,
 
 }
-console.log(params);
+// console.log(params);
 Ajax({
     url: "../controller/usuario.php",
     method, 
-    params, 
+    param, 
     fSuccess: (resp)=>{
          console.log(resp)
     }
