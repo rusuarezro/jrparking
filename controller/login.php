@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                     echo json_encode(['code'=>200,
                     'idUser'=>$result[0]["ID_USUARIO"],
                     'Usuario'=>$result[0]["NOMBRES"]." ".$result[0]["APELLIDOS"],
-                    'idToken'=>$idtoken,
+                    'idtoken'=>$idtoken,
                     'msg' => "OK"]);
                 }else{                    
                 header("HTTP/1.1 203 OK");

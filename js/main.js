@@ -1,10 +1,13 @@
 import {link, Ajax, salida} from "./tools.js"
-import { iniciarSesion } from "./login.js"
+import { iniciarSesion, validarToken } from "./login.js"
 import { registrarUsuario } from "./usuario.js"
 
 
 
 document.addEventListener("DOMContentLoaded", (e)=>{
+
+    let path = location.pathname
+    if (path.substring(path.lastIndexOf("/") + 1).includes("index") || path.substring(path.lastIndexOf("/") + 1).length == "0") validarToken()
 
 })
 // Funcionalidad de botones (carro, moto y bicicleta) 
@@ -15,7 +18,7 @@ document.addEventListener("click", (e)=>{
     if(e.target.matches("#btn-auto")) link("ingresardatos.html")
     if(e.target.matches("#btn-bici")) link("ingredatosbici.html")
     if(e.target.matches("#nueva-cuenta")) link("creaciondecuenta.html")
-    if (e.target.matches("#btncerrarsesion")) salida()
+    if(e.target.matches("#btncerrarsesion")) salida()
     
 })
 

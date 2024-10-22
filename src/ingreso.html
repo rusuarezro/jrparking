@@ -15,11 +15,11 @@
     <img src="../img/cerrarsesion.png" alt="logo" type="button" id="btncerrarsesion">
   </div>
   <nav>
-    <a href="#">Conoce tu tiempo con nosotros</a>
-    <a href="#">Nuestros parqueaderos</a>
-    <a href="#">Descuentos</a>
-    <a href="#">PQRS</a>
-    <a href="#" class="btn"><button>Contáctanos</button></a>
+    <a href="#tiempo">Conoce tu tiempo con nosotros</a>
+    <a href="#parqueaderos">Nuestros parqueaderos</a>
+    <a href="#descuentos">Descuentos</a>
+    <a href="#pqrs">PQRS</a>
+    <a href="#contactanos" class="btn"><button>Contáctanos</button></a>
   </nav>
 </header>
 <img src="../img/fondoingreso1.jpg" alt="imagen-portada" class="imagen">
@@ -43,6 +43,103 @@
       Gracias por elegirnos. Juntos, seguimos construyendo un futuro donde estacionarse sea una experiencia sencilla y agradable.</p>
   </section>
 </div>
+
+<div id="tiempo" class="seccion">
+  <h2>Conoce tu tiempo con nosotros</h2>
+  <table border="1">
+      <tr>
+          <th>Fecha Inicial</th>
+          <th>Hora Inicial</th>
+          <th>Fecha Final</th>
+          <th>Hora Final</th>
+          <th>Placa</th>
+          <th>Color</th>
+          <th>Observaciones</th>
+          <th>Duración</th>
+          <th>Fracciones</th>
+          <th>Valor de las Fracciones</th>
+          <th>Valor del Descuento</th>
+          <th>Valor a Pagar</th>
+          <th>Cliente</th>
+          <th>Ubicación</th>
+          <th>Tipo de Vehículo</th>
+          <th>Descuento Aplicado</th>
+      </tr>
+      <!-- Aquí puedes agregar filas de ejemplo o dinámicamente con JavaScript -->
+  </table>
+</div>
+
+<div id="parqueaderos" class="seccion">
+  <h2>Nuestros parqueaderos</h2>
+  <div class="bubble">
+      <img src="../img/CARRITO.png" type = button alt="Parqueadero 1" onclick="window.open('https://www.google.com/maps/place/Parqueadero+1', '_blank')">
+      <h3>Parqueadero 1</h3>
+      <p>Dirección 1</p>
+  </div>
+  <div class="bubble">
+      <img src="ruta_a_la_imagen.jpg" alt="Parqueadero 2" onclick="window.open('https://www.google.com/maps/place/Parqueadero+2', '_blank')">
+      <h3>Parqueadero 2</h3>
+      <p>Dirección 2</p>
+  </div>
+  <div class="bubble">
+      <img src="ruta_a_la_imagen.jpg" alt="Parqueadero 3" onclick="window.open('https://www.google.com/maps/place/Parqueadero+3', '_blank')">
+      <h3>Parqueadero 3</h3>
+      <p>Dirección 3</p>
+  </div>
+  <div class="bubble">
+      <img src="ruta_a_la_imagen.jpg" alt="Parqueadero 4" onclick="window.open('https://www.google.com/maps/place/Parqueadero+4', '_blank')">
+      <h3>Parqueadero 4</h3>
+      <p>Dirección 4</p>
+  </div>
+</div>
+
+<div id="descuentos" class="seccion">
+  <h2>Descuentos</h2>
+  <p>
+      Si la permanencia del automóvil es más de 5 horas, se le ofrecerá un descuento en el pago del 20%<br>
+      Si la permanencia del automóvil es más de 12 horas, se le ofrecerá un descuento en el pago del 50%
+  </p>
+</div>
+
+<div id="pqrs" class="seccion">
+  <h2>PQRS</h2>
+  <form>
+      <div class="form-group">
+          <label for="nombre">Nombres completos:</label>
+          <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+          <label for="cedula">Cédula de Identidad:</label>
+          <input type="text" id="cedula" name="cedula" required>
+      </div>
+      <div class="form-group">
+          <label for="celular">Número de Celular:</label>
+          <input type="tel" id="celular" name="celular" required>
+      </div>
+      <div class="form-group">
+          <label for="tipo_vehiculo">Tipo de Vehículo:</label>
+          <select id="tipo_vehiculo" name="tipo_vehiculo">
+              <option value="auto">Auto</option>
+              <option value="moto">Moto</option>
+              <option value="bici">Bici</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="observaciones">Observaciones:</label>
+          <textarea id="observaciones" name="observaciones" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<div id="contactanos" class="seccion">
+  <h2>Contáctanos</h2>
+  <p>Número de Celular: 3133826993</p>
+  <p>Email: rubensuarez29@gmail.com</p>
+</div>
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

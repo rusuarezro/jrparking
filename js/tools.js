@@ -26,7 +26,7 @@ export async function Ajax (info){
       method: "GET",
       param: { idtoken },
       fSuccess: (resp) => {
-        if (resp.code !== 200) alert("Error al gestionar la salida del sistema")
+        if (resp.code !== 200) 
         localStorage.clear()
         link("../src/login.html")
       }
