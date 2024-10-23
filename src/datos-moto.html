@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Parqueadero</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/datosmoto.css">
+</head>
+<body>
+    <div class="lead">
+        <h4>JR Parking "Un parquedero seguro para tu tranquilidad"</h4>
+    </div>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="titulo-principal">Motocicleta</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <form method="post" id="form-parqueadero" name="form-parqueadero">
+                        <div class="form-group">
+                            <label for="placa">Ingrese la placa de su vehículo</label>
+                            <input type="text" class="form-control" id="placa" placeholder="Placa del vehículo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="documento">Ingrese su número de documento</label>
+                            <input type="text" class="form-control" id="documento" placeholder="Número de documento" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Seleccione el parqueadero</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="parqueadero1" value="1">
+                                <label class="form-check-label" for="parqueadero1">Parqueadero La 56</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="parqueadero2" value="2">
+                                <label class="form-check-label" for="parqueadero2">Parqueadero Real de minas</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="parqueadero3" value="3">
+                                <label class="form-check-label" for="parqueadero3">Parqueadero La isla</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="parqueadero4" value="4">
+                                <label class="form-check-label" for="parqueadero4">Parqueadero Cabecera</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Puestos disponibles</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto101" value="101">
+                                <label class="form-check-label" for="puesto101">101</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto102" value="102">
+                                <label class="form-check-label" for="puesto102">102</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto103" value="103">
+                                <label class="form-check-label" for="puesto103">103</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto126" value="126">
+                                <label class="form-check-label" for="puesto126">126</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puestoA01" value="A01">
+                                <label class="form-check-label" for="puestoA01">A01</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puestoB20" value="B20">
+                                <label class="form-check-label" for="puestoB20">B20</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puestoC25" value="C25">
+                                <label class="form-check-label" for="puestoC25">C25</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto111" value="111">
+                                <label class="form-check-label" for="puesto111">111</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto222" value="222">
+                                <label class="form-check-label" for="puesto222">222</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="puesto128" value="128">
+                                <label class="form-check-label" for="puesto128">128</label>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-custom">Generar Ticket</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>
