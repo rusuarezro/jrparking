@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 document.addEventListener("click", (e)=>{
     //console.log(e.target.matches(".btn-ingresar"))
     if(e.target.matches(".btn-ingresar")) link("login.html")
-    if(e.target.matches("#btn-auto")) link("ingresardatos.html")
+    if(e.target.matches("#btn-auto")) link("datos_auto.html")
     if(e.target.matches("#btn-bici")) link("ingredatosbici.html")
     if(e.target.matches("#nueva-cuenta")) link("creaciondecuenta.html")
     if(e.target.matches("#btncerrarsesion")) salida()
